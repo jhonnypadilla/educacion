@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cambio de aceite de la moto</title>
+	<script type="text/javascript" src="script.js"></script>
+	<style type="text/css">
+		input[type="number"], input[type="button"] {
+			font-size: 18px;
+			padding: 8px;
+			border: none;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			margin: 10px;
+			box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+		}
+		input[type="button"]:hover {
+			background-color: #e6e6e6;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Cambio de aceite de la moto</h1>
+	<form>
+		<label for="km">Kilometraje actual:</label>
+		<input type="number" id="km" name="km"><br><br>
+		<input type="button" value="Calcular" onclick="calcularProximoCambio()">
+	</form>
+	<p id="proximoCambio"></p>
+</body>
+</html>
+
+ <script>
+  function calcularProximoCambio() {
+  var kmActual = document.getElementById("km").value;
+  var kmProximoCambio = parseInt(kmActual) + 3000;
+  document.getElementById("proximoCambio").innerHTML = "El próximo cambio de aceite debe realizarse cuando el kilometraje alcance " + kmProximoCambio + " km.";
+}
+
+    </script>
